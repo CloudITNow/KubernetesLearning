@@ -64,29 +64,42 @@ Project demonstrates good standards of K8S:
 ### Deployment Steps
 
 1. **Build the Docker image**
+   ```bash
    docker build -t flask-app:latest .
+   ```
 
 2. **Deploy Redis**
+   ```bash
    kubectl apply -f redis-deployment.yaml
+   ```
 
 3. **Deploy Flask application (both environments)**
+   ```bash
    kubectl apply -f flask-deployment.yaml
+   ```
 
 4. **Access the applications**
    - Production environment: http://[cluster-ip]:30005
    - Development environment: http://[cluster-ip]:30006
 
+
 ### Verifying Deployment
 
 1. **Check pod status**
+   ```bash
    kubectl get pods
+   ```
 
 2. **Check service status**
+   ```bash
    kubectl get services
+   ```
 
 3. **View logs**
+   ```bash
    kubectl logs deployment/flask-prod
    kubectl logs deployment/flask-dev
+   ```
 
 ## Architecture Details
 
