@@ -1,3 +1,3 @@
 flask==2.0.1
 werkzeug==2.0.1 # WSGI library for Python
-redis
+redis # latest by default
