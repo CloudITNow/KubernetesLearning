@@ -79,8 +79,8 @@ Project demonstrates good standards of K8S:
    ```
 
 4. **Access the applications**
-   - Production environment: http://[cluster-ip]:30005
-   - Development environment: http://[cluster-ip]:30006
+   - Production environment: http://[cluster-ip]:30005 which means in our case http://localhost:30005
+   - Development environment: http://[cluster-ip]:30006 which means in our case http://localhost:30006
 
 
 ### Verifying Deployment
