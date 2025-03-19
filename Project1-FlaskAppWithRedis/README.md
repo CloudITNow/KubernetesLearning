@@ -1,10 +1,10 @@
 # Flask Application with Redis on Kubernetes
 
-This project demonstrates deploying a simple Flask web application with Redis caching on Kubernetes, running in both production and development environments simultaneously.
+Project demonstrates deploying a simple Flask web application with Redis caching on Kubernetes, running in both production and development environments simultaneously.
 
 ## Project Overview
 
-This demonstration showcases a simple web counter application that:
+This is a simple showcases of a web counter application that:
 - Tracks the number of visits separately for both environments
 - Connects to a shared Redis instance for data persistence
 - Shows the pod hostname, environment, and visit count
@@ -24,7 +24,7 @@ The Flask application provides a simple web page that:
 
 #### Flask Deployments and Services (`flask-deployment.yaml`)
 - **Production Deployment (`flask-prod`)**
-  - 1 replica
+  - 1 replica # it can be extended for our requirements
   - Limited resources (50m CPU request, 100m CPU limit)
   - Production environment variables
   - Exposed via NodePort 30005
@@ -42,7 +42,7 @@ The Flask application provides a simple web page that:
 
 ## Resource Management
 
-The project demonstrates good Kubernetes practices:
+Project demonstrates good standards of K8S:
 
 - **Resource Allocation**
   - Production environment has minimal resource allocation
@@ -57,53 +57,36 @@ The project demonstrates good Kubernetes practices:
 ## Setup and Deployment Instructions
 
 ### Prerequisites
-- Docker installed
+- Docker installed - I mean Docker Desktop with Kubernetes enables under "Settings"
 - Kubernetes cluster running (Minikube, kind, or other)
 - kubectl configured to communicate with your cluster
 
 ### Deployment Steps
 
 1. **Build the Docker image**
-   ```bash
    docker build -t flask-app:latest .
-   ```
 
 2. **Deploy Redis**
-   ```bash
    kubectl apply -f redis-deployment.yaml
-   ```
 
 3. **Deploy Flask application (both environments)**
-   ```bash
    kubectl apply -f flask-deployment.yaml
-   ```
 
 4. **Access the applications**
    - Production environment: http://[cluster-ip]:30005
    - Development environment: http://[cluster-ip]:30006
 
-   If using Minikube, get the IP with:
-   ```bash
-   minikube ip
-   ```
-
 ### Verifying Deployment
 
 1. **Check pod status**
-   ```bash
    kubectl get pods
-   ```
 
 2. **Check service status**
-   ```bash
    kubectl get services
-   ```
 
 3. **View logs**
-   ```bash
    kubectl logs deployment/flask-prod
    kubectl logs deployment/flask-dev
-   ```
 
 ## Architecture Details
 
