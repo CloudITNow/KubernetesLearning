@@ -1,6 +1,8 @@
-# This is a open-source project for everyone who wants to learn Kubernetes and containers from scratch :)
+# Kubernetes and containers from scratch
 
-## Projects Lists
+## This is a open-source project for everyone who wants to learn Kubernetes and containers from scratch :)
 
-### Python Flask App with Redis cache - "Project1-FlaskAppWithRedis"
+### Projects Lists
+
+#### Python Flask App with Redis cache - "Project1-FlaskAppWithRedis"
 
