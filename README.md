@@ -4,5 +4,4 @@
 
 ### Projects Lists
 
-#### Python Flask App with Redis cache - "Project1-FlaskAppWithRedis"
-
+#### [Python Flask App with Redis cache - "Project1-FlaskAppWithRedis"](https://github.com/CloudITNow/KubernetesLearning/tree/main/Project1-FlaskAppWithRedis)
