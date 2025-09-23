@@ -10,11 +10,11 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-      time: "15:00"
+      time: "15:30"
       timezone: "Europe/Warsaw"
     open-pull-requests-limit: 5
     reviewers:
-      - "CloudITNow"  # My username for review
+      - "CloudITNow"  # Twoja nazwa użytkownika GitHub
     assignees:
       - "CloudITNow"
     commit-message:
@@ -24,7 +24,7 @@ updates:
       - "dependencies"
       - "python"
 
-  # Docker images in YAML file
+  # Docker images w plikach YAML
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
@@ -42,22 +42,3 @@ updates:
     labels:
       - "dependencies"
       - "docker"
-
-  # GitHub Actions - if have any action
-  - package-ecosystem: "github-actions"
-    directory: "/.github/workflows"
-    schedule:
-      interval: "daily"
-      time: "15:00"
-      timezone: "Europe/Warsaw"
-    open-pull-requests-limit: 2
-    reviewers:
-      - "CloudITNow"
-    assignees:
-      - "CloudITNow"
-    commit-message:
-      prefix: "actions"
-      include: "scope"
-    labels:
-      - "dependencies"
-      - "github-actions"
