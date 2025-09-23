@@ -1,3 +1,3 @@
 flask==3.1.2
-werkzeug==2.0.1 # WSGI library for Python
+werkzeug==3.1.3 # WSGI library for Python  
 redis # latest by default
