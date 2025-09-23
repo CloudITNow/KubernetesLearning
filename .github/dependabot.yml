@@ -24,7 +24,7 @@ updates:
       - "dependencies"
       - "python"
 
-  # Docker images w plikach YAML
+  # Docker images in YAML file
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
