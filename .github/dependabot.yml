@@ -10,11 +10,11 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-      time: "15:30"
+      time: "16:00"
       timezone: "Europe/Warsaw"
     open-pull-requests-limit: 5
     reviewers:
-      - "CloudITNow"  # Twoja nazwa użytkownika GitHub
+      - "CloudITNow"  # My username for review
     assignees:
       - "CloudITNow"
     commit-message:
