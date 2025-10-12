@@ -1,20 +1,13 @@
-# To get started with Dependabot version updates, you'll need to specify which
-# package ecosystems to update and where the package manifests are located.
-# Please see the documentation for all configuration options:
-# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
-
 version: 2
 updates:
-  # Python dependencies (requirements.txt)
+  # Python dependencies
   - package-ecosystem: "pip"
-    directory: "/"
+    directory: "/Project1-FlaskAppWithRedis"  # ← Poprawiona ścieżka
     schedule:
       interval: "daily"
       time: "16:00"
       timezone: "Europe/Warsaw"
     open-pull-requests-limit: 5
-    reviewers:
-      - "CloudITNow"  # My username for review
     assignees:
       - "CloudITNow"
     commit-message:
@@ -23,17 +16,15 @@ updates:
     labels:
       - "dependencies"
       - "python"
-
-  # Docker images in YAML file
+  
+  # Docker images
   - package-ecosystem: "docker"
-    directory: "/"
+    directory: "/Project1-FlaskAppWithRedis"  # ← Poprawiona ścieżka
     schedule:
       interval: "daily"
       time: "16:00"
       timezone: "Europe/Warsaw"
     open-pull-requests-limit: 3
-    reviewers:
-      - "CloudITNow"
     assignees:
       - "CloudITNow"
     commit-message:
@@ -42,3 +33,17 @@ updates:
     labels:
       - "dependencies"
       - "docker"
+  
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      time: "16:00"
+      timezone: "Europe/Warsaw"
+    open-pull-requests-limit: 5
+    assignees:
+      - "CloudITNow"
+    labels:
+      - "dependencies"
+      - "github-actions"
